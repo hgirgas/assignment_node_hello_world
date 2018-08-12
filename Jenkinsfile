@@ -7,17 +7,11 @@ pipeline {
    }
    }
    stage('Test ') {
-            when {
-                branch 'master'
-            }
             steps {
                input 'Does Build environment look ok?'
             }
    }
       stage('Production ') {
-            when {
-                branch 'master'
-            }
             steps {
                input 'Does Test environment look ok?'
             }
