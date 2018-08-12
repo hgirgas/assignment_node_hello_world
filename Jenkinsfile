@@ -4,7 +4,7 @@ pipeline {
    stage('Build') {
    steps {
    input 'Does this work'
-   milestone(1)
+ 
    }
    }
    }
