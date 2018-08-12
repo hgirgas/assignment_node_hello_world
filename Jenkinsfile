@@ -3,10 +3,23 @@ pipeline {
    stages{
    stage('Build') {
    steps {
-   input 'Does this work'
- 
+   echo 'Running Build'
    }
    }
+   stage('Test ') {
+            when {
+                branch 'master'
+            }
+            steps {
+               input 'Does Build environment look ok?'
+            }
+   }
+      stage('Production ') {
+            when {
+                branch 'master'
+            }
+            steps {
+               input 'Does Test environment look ok?'
+            }
    }
    }
-   
